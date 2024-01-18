@@ -33,7 +33,7 @@ const HeroContent = () => {
           I&apos;m a Full stack Developer with experience in website,
           and software development. Check out my projects and skills.
         </motion.p>
-        <motion.a variants={slideInFromLeft(1)} className="py-2 text-center text-white cursor-pointer rounded-lg max-w-52">
+        <motion.a variants={slideInFromLeft(1)} className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-52">
           View More!
         </motion.a>
       </div>
