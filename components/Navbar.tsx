@@ -20,22 +20,23 @@ const Navbar = () => {
           </a>
         </li>
 
-        <li className="w-[500px] h-auto flex flex-row items-center justify-between md:mr-20     border border-[#7042f861] bg-[#0300145e] px-5 py-2 rounded-full text-gray-200">
+        <ul className="w-[500px] h-auto flex flex-row items-center justify-between md:mr-20     border border-[#7042f861] bg-[#0300145e] px-5 py-2 rounded-full text-gray-200">
           <li><a href="#about" className="cursor-pointer">Sobre mim</a></li>
           <li><a href="#skills" className="cursor-pointer">Habilidades</a></li>
           <li><a href="#projects" className="cursor-pointer">Projetos</a></li>
-        </li>
+        </ul>
 
         <li className="flex flex-row gap-6">
           {
             Socials.map(item => (
-              <Image
-                src={item.src}
-                alt={item.name}
-                key={item.name}
-                width={24}
-                height={24}
-              />
+              <a key={item.name} href={item.url ? item.url : undefined} target="_blank">
+                <Image
+                  src={item.src}
+                  alt={item.name}
+                  width={24}
+                  height={24}
+                />
+              </a>
             ))
           }
         </li>
